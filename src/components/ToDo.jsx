@@ -5,7 +5,7 @@ import {
   faCircleCheck, faPen, faTrashCan
 } from '@fortawesome/free-solid-svg-icons'
 
-const ToDo = ({ toDo, markDone, setUpdateData, deleteTask }) => {
+const ToDofn = ({ toDo, markDone, setUpdateData, deleteTask }) => {
   return(
     <>
       {toDo && toDo
@@ -19,14 +19,14 @@ const ToDo = ({ toDo, markDone, setUpdateData, deleteTask }) => {
                 <span className="taskText">{task.title}</span>
               </div>
               <div className="iconsWrap">
-                <span title="Completed / Not Completed"
+                <span title="Done / Not Done"
                   onClick={ (e) => markDone(task.id) }
                 >
                   <FontAwesomeIcon icon={faCircleCheck} />
                 </span>
 
                 {task.status ? null : (
-                  <span title="Edit"
+                  <span title="Update"
                     onClick={ () => setUpdateData({ 
                       id: task.id, 
                       title: task.title, 
@@ -52,4 +52,4 @@ const ToDo = ({ toDo, markDone, setUpdateData, deleteTask }) => {
   )
 }
 
-export default ToDo;
+export default ToDofn;
