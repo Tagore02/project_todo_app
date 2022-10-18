@@ -73,7 +73,7 @@ function App() {
     <h1 className='a'>To Do App </h1>
     <br /><br />
 
-    {(updateData && updateData) ? (
+    {updateData ? (
       <UpdateForm 
         updateData={updateData}
         changeTask={changeTask}
